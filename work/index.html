@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find work · Gigwatt</title>
+
+
+<meta name="description" content="Electricians, low voltage techs and pipefitters for data center, energy and industrial builds. Free for workers; employers pay only per hire.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Gigwatt">
+<meta property="og:title" content="Gigwatt: skilled trades for data center builds"><meta property="og:description" content="Electricians, low voltage techs and pipefitters for data center, energy and industrial builds. Free for workers; employers pay only per hire.">
+<meta property="og:image" content="https://gigwatt.co/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gigwatt: skilled trades for data center builds">
+<meta name="twitter:description" content="Electricians, low voltage techs and pipefitters for data center, energy and industrial builds. Free for workers; employers pay only per hire."><meta name="twitter:image" content="https://gigwatt.co/og.png">
+<style>
+:root{--bg:#fafaf7;--fg:#16181d;--muted:#5b616e;--card:#fff;--line:#e3e3dc;--accent:#d9480f;--accent-fg:#fff;--ok:#2b8a3e}
+@media (prefers-color-scheme:dark){:root{--bg:#121316;--fg:#ececec;--muted:#a0a6b1;--card:#1b1d22;--line:#2c2f36;--accent:#ff6b2c;--accent-fg:#111}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:24px 16px}a{color:var(--accent)}
+header{display:flex;justify-content:space-between;align-items:center}header b{font-size:20px;letter-spacing:-.02em}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:48px 0 16px}
+h2{letter-spacing:-.02em}.lead{font-size:19px;color:var(--muted);max-width:640px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:600;border:0;font-size:16px;cursor:pointer}
+.btn.alt{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:32px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 6px}.muted{color:var(--muted)}small{color:var(--muted)}
+form .card{display:grid;gap:14px}label{display:grid;gap:6px;font-weight:600;font-size:14px}
+input,textarea,select{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--fg);width:100%}
+textarea{min-height:120px}.check{display:flex;gap:10px;align-items:flex-start;font-weight:400}.check input{width:auto;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;border:1px solid var(--line);font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}.kpis .card b{font-size:26px;display:block}
+pre{white-space:pre-wrap;font:13px/1.45 ui-monospace,monospace;margin:0}footer{margin-top:64px;color:var(--muted);font-size:14px}
+</style></head><body><div class="wrap">
+<header><b>Gigwatt</b><nav><a href="../work/">Jobs</a> · <a href="../hire/">Hire</a> · <a href="../work/">Find work</a></nav></header>
+
+<h1>Get matched to better-paying jobs.</h1><p class="lead">Free for workers. Two minutes. We text only when a job fits your trade, area and rate.</p>
+<form method="post" action="#"><input type="hidden" name="job" value=""><input type="hidden" name="ref" value=""><input type="hidden" name="src" value=""><div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><div class="card">
+<label>About you<textarea name="about" required placeholder="e.g. Journeyman electrician, 9 yrs, commercial + 2 data centers, Columbus OH, will travel, need $42/hr min, OSHA 30, NFPA 70E"></textarea></label>
+<label>Name<input name="name" required></label>
+<label>Mobile number<input name="phone" type="tel" required placeholder="+15551234567"></label>
+<label class="check"><input type="checkbox" name="consent" value="1" required><span>By checking this box you agree to receive recruiting text messages from Gigwatt about jobs, including automated texts, at the number provided. Consent is not a condition of any service. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span></label>
+<button class="btn">Find me jobs</button></div></form>
+<footer>Gigwatt · AI-assisted recruiting for skilled trades · <a href="../privacy/">Privacy &amp; AI use</a></footer>
+</div><script>(() => {
+  const p = new URLSearchParams(location.search), f = document.querySelector('form[method="post"]');
+  if (!f) return;
+  const q = p.get('q'), job = p.get('job'), ref = p.get('ref');
+  if (q && f.request && !f.request.value) f.request.value = q.slice(0, 1000);
+  if (job && f.job && /^\d+$/.test(job)) f.job.value = job;
+  if (ref && f.ref && /^[A-Za-z0-9]{1,12}$/.test(ref)) f.ref.value = ref;
+  const src = p.get('src');
+  if (src && f.src && /^[A-Za-z0-9_-]{1,20}$/.test(src)) f.src.value = src.toLowerCase();
+})();</script><script>(() => {
+  document.querySelectorAll('form[method="post"]').forEach(f => {
+    const b = f.querySelector('button'); if (b) { b.disabled = true; b.textContent = 'Signups open soon'; }
+    f.addEventListener('submit', e => e.preventDefault());
+  });
+})();</script></body></html>

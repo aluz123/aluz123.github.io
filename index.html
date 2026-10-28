@@ -1,0 +1,181 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gigwatt: hire electricians in one text</title>
+
+
+
+
+<meta name="description" content="AI agents find, screen and deliver data center crews in 72 hours. Pay only when you hire.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Gigwatt">
+<meta property="og:title" content="Gigwatt: hire electricians in one text"><meta property="og:description" content="AI agents find, screen and deliver data center crews in 72 hours. Pay only when you hire.">
+<meta property="og:image" content="https://gigwatt.co/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Gigwatt: hire electricians in one text">
+<meta name="twitter:description" content="AI agents find, screen and deliver data center crews in 72 hours. Pay only when you hire."><meta name="twitter:image" content="https://gigwatt.co/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--panel:#121214;--panel2:#17171a;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+--fg:#f4f4f5;--muted:#8b8b94;--dim:#5c5c66;--volt:#ff7a1a;--volt2:#ffb547;--ok:#4ade80}
+*{box-sizing:border-box;margin:0}html{-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 Geist,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.mono{font-family:"Geist Mono",ui-monospace,monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+/* background: grid + glow */
+.bgfx{position:absolute;inset:0;height:980px;pointer-events:none;overflow:hidden;z-index:0}
+.bgfx:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 30%,transparent 75%)}
+.bgfx:after{content:"";position:absolute;left:50%;top:-320px;width:1100px;height:700px;transform:translateX(-50%);
+background:radial-gradient(closest-side,rgba(255,122,26,.28),rgba(255,122,26,.06) 55%,transparent);filter:blur(10px)}
+nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;gap:10px;align-items:center;font-weight:600;font-size:18px;letter-spacing:-.02em}
+.mark{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--volt2),var(--volt));display:grid;place-items:center;box-shadow:0 0 24px rgba(255,122,26,.45)}
+.mark svg{width:15px;height:15px}
+.navr{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)}.navr a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:9px;font-weight:500;font-size:14px;color:#0a0a0b;
+background:var(--fg);transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px);background:#fff}
+/* hero */
+.hero{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 96px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border:1px solid var(--line2);border-radius:99px;font-size:13px;color:var(--muted);background:rgba(255,255,255,.03)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 4px rgba(255,122,26,.18);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(255,122,26,0)}}
+h1{font-size:clamp(44px,6.6vw,84px);line-height:.98;letter-spacing:-.045em;font-weight:600;margin:22px 0 22px}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--volt2),var(--volt) 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:19px;color:var(--muted);max-width:470px;line-height:1.5}
+.ask{margin-top:34px;display:flex;gap:8px;padding:7px;border-radius:14px;background:var(--panel);border:1px solid var(--line2);max-width:520px;
+box-shadow:0 0 0 1px rgba(0,0,0,.4),0 20px 60px -20px rgba(255,122,26,.25);transition:border-color .2s}
+.ask:focus-within{border-color:rgba(255,122,26,.6)}
+.ask input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--fg);font:inherit;font-size:16px;padding:0 10px}
+.ask input::placeholder{color:var(--dim)}
+.ask button{height:46px;padding:0 18px;border:0;border-radius:9px;font:inherit;font-weight:600;color:#160b02;cursor:pointer;
+background:linear-gradient(180deg,var(--volt2),var(--volt));display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.ask button:hover{filter:brightness(1.08)}
+.terms{margin-top:14px;font-size:13px;color:var(--dim);display:flex;gap:14px;flex-wrap:wrap}.terms span:before{content:"✓ ";color:var(--volt)}
+/* demo */
+.demo{position:relative;border-radius:18px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line2);
+box-shadow:0 40px 120px -30px rgba(0,0,0,.9),0 0 0 1px rgba(0,0,0,.5);overflow:hidden}
+.demo:before{content:"";position:absolute;inset:-1px;border-radius:18px;padding:1px;background:linear-gradient(160deg,rgba(255,122,26,.55),transparent 40%);
+-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.bar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--dim)}
+.bar i{width:9px;height:9px;border-radius:50%;background:#2a2a2f}.bar b{margin-left:auto;font-weight:400}
+.feed{padding:20px 20px 34px;min-height:440px;display:flex;flex-direction:column;gap:12px}
+.msg{align-self:flex-end;max-width:85%;background:var(--fg);color:#0a0a0b;padding:11px 14px;border-radius:14px 14px 4px 14px;font-size:14.5px;line-height:1.4}
+.step{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+.step .ic{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--dim);display:grid;place-items:center;flex:none}
+.step.done .ic{border-color:var(--ok);background:rgba(74,222,128,.12)}.step.done .ic:after{content:"";width:6px;height:3px;border:solid var(--ok);border-width:0 0 1.5px 1.5px;transform:rotate(-45deg) translate(1px,-1px)}
+.step.run .ic{border-color:var(--volt);border-top-color:transparent;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.step b{color:var(--fg);font-weight:500}
+.cand{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.av{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-weight:600;font-size:13px;flex:none;color:#160b02}
+.cand .t{font-size:14px;font-weight:500}.cand .s{font-size:12.5px;color:var(--muted)}
+.fit{margin-left:auto;font-size:12px;padding:3px 8px;border-radius:6px;color:var(--ok);background:rgba(74,222,128,.1);white-space:nowrap}
+.ready{font-size:13px;color:var(--volt2);display:flex;align-items:center;gap:8px}
+.fx{opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s}.fx.in{opacity:1;transform:none}
+.cap{position:absolute;right:14px;bottom:12px;font-size:11px;color:var(--dim)}
+/* marquee */
+.band{position:relative;z-index:1;margin:0 0 96px;border-block:1px solid var(--line);overflow:hidden;
+mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;width:max-content;animation:slide 40s linear infinite}
+.track span{display:flex;align-items:center;gap:14px;padding:20px 26px;font-size:15px;color:var(--muted);white-space:nowrap}
+.track span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--volt);box-shadow:0 0 10px var(--volt)}
+.track span.t{color:var(--fg);font-weight:500}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* sections */
+section{position:relative;z-index:1}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.steps>div{padding:30px 28px;border-right:1px solid var(--line)}.steps>div:last-child{border:0}
+.steps .n{font-size:12px;color:var(--volt)}.steps h3{font-size:21px;letter-spacing:-.02em;font-weight:600;margin:14px 0 6px}.steps p{color:var(--muted);font-size:15px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:110px 0}
+.nums div{border-top:1px solid var(--line2);padding-top:22px}
+.nums b{display:block;font-size:clamp(48px,6vw,76px);font-weight:600;letter-spacing:-.05em;line-height:1}
+.nums span{color:var(--muted);font-size:15px}
+.work{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:48px;border-radius:22px;
+background:radial-gradient(120% 140% at 100% 0%,rgba(255,122,26,.35),transparent 55%),var(--panel2);border:1px solid var(--line2);flex-wrap:wrap}
+.work h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.05;font-weight:600}
+.work p{color:var(--muted);margin-top:10px;font-size:17px}
+.btn.big{height:52px;padding:0 24px;font-size:16px;border-radius:12px}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:56px 0 40px;color:var(--dim);font-size:13px}footer a:hover{color:var(--fg)}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:44px;padding:40px 0 72px}.steps,.nums{grid-template-columns:1fr}
+.steps>div{border-right:0;border-bottom:1px solid var(--line)}.nums{gap:36px;padding:80px 0}.work{padding:30px}.navr .hide{display:none}}
+@media (max-width:480px){.ask{flex-direction:column}.ask input{height:46px}.ask button{justify-content:center}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<div class="bgfx"></div>
+<div class="wrap">
+<nav><a class="logo" href="./"><span class="mark"><svg viewBox="0 0 24 24" fill="#160b02"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>Gigwatt</a>
+<div class="navr"><a class="hide" href="#how">How it works</a><a href="./work/">Find work</a><a class="btn" href="./hire/">Hire a crew</a></div></nav>
+
+<header class="hero">
+ <div>
+  <span class="pill"><span class="dot"></span>AI recruiting for the AI build-out</span>
+  <h1>Hire electricians<br>in <em>one text.</em></h1>
+  <p class="sub">AI agents find, screen and deliver data center crews in 72 hours. Pay only when you hire.</p>
+  <form class="ask" action="./hire/" method="get">
+   <input name="q" aria-label="Who do you need?" placeholder="12 journeymen, Abilene TX, $46/hr…" autocomplete="off">
+   <button>Find my crew <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </form>
+  <div class="terms"><span>$0 upfront</span><span>$2,500 per hire</span><span>30-day guarantee</span></div>
+ </div>
+
+ <div class="demo" aria-label="Example of an agent run">
+  <div class="bar"><i></i><i></i><i></i><b class="mono">gigwatt agent · live run</b></div>
+  <div class="feed" id="feed"></div>
+  <div class="cap mono">example run</div>
+ </div>
+</header>
+
+</div>
+<div class="band" aria-label="Trades and markets"><div class="track"><span class="t">Journeyman electricians</span><span class="">Ashburn, VA</span><span class="t">Foremen</span><span class="">Abilene, TX</span><span class="t">Low-voltage techs</span><span class="">Columbus, OH</span><span class="t">Pipefitters</span><span class="">Phoenix, AZ</span><span class="t">Commissioning techs</span><span class="">Atlanta, GA</span><span class="t">Instrumentation</span><span class="">Council Bluffs, IA</span><span class="t">Reno, NV</span><span class="">Richmond, VA</span><span class="t">Journeyman electricians</span><span class="">Ashburn, VA</span><span class="t">Foremen</span><span class="">Abilene, TX</span><span class="t">Low-voltage techs</span><span class="">Columbus, OH</span><span class="t">Pipefitters</span><span class="">Phoenix, AZ</span><span class="t">Commissioning techs</span><span class="">Atlanta, GA</span><span class="t">Instrumentation</span><span class="">Council Bluffs, IA</span><span class="t">Reno, NV</span><span class="">Richmond, VA</span></div></div>
+<div class="wrap">
+<section id="how" class="steps">
+ <div><span class="n mono">01</span><h3>Text us who you need.</h3><p>Trade, headcount, city, rate. One message.</p></div>
+ <div><span class="n mono">02</span><h3>Agents do the recruiting.</h3><p>Sourced, texted and screened by morning.</p></div>
+ <div><span class="n mono">03</span><h3>Hire. Then pay.</h3><p>Flat fee after 14 days on site.</p></div>
+</section>
+
+<section class="nums">
+ <div><b>72h</b><span>to first screened candidates</span></div>
+ <div><b>$0</b><span>until someone starts work</span></div>
+ <div><b>~3%</b><span>of a year's pay. Agencies take 15–25%.</span></div>
+</section>
+
+<section class="work">
+ <div><h2>Electrician? Get paid more.</h2><p>Free. We only text when a job beats your rate.</p></div>
+ <a class="btn big" href="./work/">Find work →</a>
+</section>
+
+<footer><span>© Gigwatt</span><span><a href="./privacy/">Privacy &amp; AI use</a> · <a href="./work/">Jobs</a> · <a href="./hire/">Hire</a> · <a href="./work/">Work</a></span></footer>
+</div>
+
+<script>
+(() => {
+  const feed = document.getElementById('feed');
+  const C = [["MR","#ffb547","Marcus R.","Journeyman · 11 yrs · OSHA 30","96% fit"],
+             ["DT","#ff9a3d","Dana T.","Foreman · 14 yrs · 2 hyperscale builds","94% fit"],
+             ["JL","#ff7a1a","Jorge L.","Journeyman · 8 yrs · NFPA 70E","91% fit"]];
+  const S = [["Searching within 90 mi of Abilene","2,140 electricians found"],
+             ["Texting matched journeymen","214 contacted"],
+             ["Screening replies","41 replied · 18 qualified"]];
+  const el = (cls, html) => { const d = document.createElement('div'); d.className = cls + ' fx'; d.innerHTML = html; feed.appendChild(d);
+    requestAnimationFrame(() => requestAnimationFrame(() => d.classList.add('in'))); return d; };
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  async function run() {
+    feed.innerHTML = '';
+    const m = el('msg', ''); const text = "Need 12 journeymen in Abilene, TX. $46/hr + per diem. Start Nov 17.";
+    if (reduce) m.textContent = text; else for (const ch of text) { m.textContent += ch; await wait(22); }
+    await wait(500);
+    for (const [label, result] of S) {
+      const s = el('step run', `<span class="ic"></span><span>${label}…</span>`);
+      await wait(reduce ? 0 : 1100);
+      s.className = 'step done fx in'; s.innerHTML = `<span class="ic"></span><span>${label} · <b>${result}</b></span>`;
+    }
+    await wait(400);
+    for (const [i, c, n, d, f] of C) { el('cand', `<span class="av" style="background:${c}">${i}</span><span><div class="t">${n}</div><div class="s">${d}</div></span><span class="fit mono">${f}</span>`); await wait(reduce ? 0 : 450); }
+    el('ready mono', '● 3 candidates ready to interview');
+    if (!reduce) { await wait(6000); run(); }
+  }
+  run();
+})();
+</script>
+</body></html>
