@@ -13,6 +13,7 @@
 - Updated: 2026-10-29
 
 ## Pages
+- [Full text of this site](https://gigwatt.co/llms-full.txt): every page below in plain text
 - [Hire workers](https://gigwatt.co/hire/): request electricians or other trades in one message
 - [Find work](https://gigwatt.co/work/): free sign-up for tradespeople
 - [FAQ](https://gigwatt.co/faq/): cost, speed, trades, screening, guarantee

@@ -87,6 +87,10 @@ section{position:relative;z-index:1}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
 .steps>div{padding:30px 28px;border-right:1px solid var(--line)}.steps>div:last-child{border:0}
 .steps .n{font-size:12px;color:var(--volt)}.steps h3{font-size:21px;letter-spacing:-.02em;font-weight:600;margin:14px 0 6px}.steps p{color:var(--muted);font-size:15px}
+.qa{padding:0 0 110px}.qa h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.03em;font-weight:600;margin-bottom:28px}
+.qa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.qa-grid>div{border:1px solid var(--line);border-radius:18px;padding:26px 26px;background:var(--panel)}
+.qa h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin-bottom:8px}.qa p{color:var(--muted);font-size:15px}.qa .more{margin-top:22px;font-size:15px}.qa .more a{color:var(--volt)}
+@media(max-width:760px){.qa-grid{grid-template-columns:1fr}}
 .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:110px 0}
 .nums div{border-top:1px solid var(--line2);padding-top:22px}
 .nums b{display:block;font-size:clamp(48px,6vw,76px);font-weight:600;letter-spacing:-.05em;line-height:1}
@@ -110,7 +114,7 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
 <header class="hero">
  <div>
   <span class="pill"><span class="dot"></span>AI recruiting for the AI build-out</span>
-  <h1>Hire electricians<br>in <em>one text.</em></h1>
+  <h1>Hire electricians <br>in <em>one text.</em></h1>
   <p class="sub">AI agents find, screen and deliver data center crews in 72 hours. Pay only when you hire.</p>
   <form class="ask" action="./hire/" method="get">
    <input name="q" aria-label="Who do you need?" placeholder="12 journeymen, Abilene TX, $46/hr…" autocomplete="off">
@@ -139,6 +143,12 @@ footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;paddin
  <div><b>72h</b><span>to first screened candidates</span></div>
  <div><b>$0</b><span>until someone starts work</span></div>
  <div><b>~3%</b><span>of a year's pay. Agencies take 15–25%.</span></div>
+</section>
+
+<section class="qa" aria-labelledby="qa-h">
+ <h2 id="qa-h">Questions, answered</h2>
+ <div class="qa-grid"><div><h3>What is Gigwatt?</h3><p>Gigwatt is an AI-run recruiting company for skilled trades on data center, energy and industrial builds. AI agents find contractors who are hiring, source and screen electricians, low-voltage techs and pipefitters by text, and send the contractor interview-ready introductions. A person reviews every introduction.</p></div><div><h3>How much does it cost to hire through Gigwatt?</h3><p>Gigwatt charges a flat $2,500 per hire, invoiced after the worker has been on site for 14 days and due in 15 days. There is no upfront fee, no contract and nothing to pay if you don&#39;t hire.</p></div><div><h3>Is Gigwatt free for electricians and other tradespeople?</h3><p>Yes. Workers never pay. Employers pay the placement fee, and a worker&#39;s profile is only shared with an employer after the worker says yes to that specific job.</p></div><div><h3>How is Gigwatt different from a staffing agency?</h3><p>Traditional agencies typically charge 15-25% of first-year pay for a direct hire, or a 30-60% markup on temporary labor. Gigwatt charges a flat $2,500 per hire, the worker joins your payroll, and there&#39;s no contract to negotiate for the first hire.</p></div></div>
+ <p class="more"><a href="./faq/">All questions</a> · <a href="./guides/hire-data-center-electricians/">How to hire data center electricians</a></p>
 </section>
 
 <section class="work">
