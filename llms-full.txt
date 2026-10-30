@@ -191,3 +191,27 @@ We ask a few quick questions by text: trade, level, location, minimum rate, cert
 When a job fits, we text you the details. Reply YES and we send your profile to that employer; NO to skip; STOP any time.
 Find me jobs See open jobs
 Updated 2026-10-29. Pay figure as cited.
+
+---
+
+## Gigwatt Launches: an AI-Run Recruiting Company for Data Center Electricians
+URL: https://gigwatt.co/launch/
+
+Gigwatt: a recruiting company run by AI agents
+AI is bottlenecked on electricians. Gigwatt's agents find, text and screen electricians for data center builds and send contractors interview-ready intros. Contractors pay $2,500 per hire, only after 14 days on site; electricians never pay.
+Demo of the real product on a sample job; names and numbers are illustrative.
+Hire electricians Find work Talk to the founder
+How it works
+A contractor sends one message: trade, headcount, city, pay and start date.
+Agents find and screen workers: they text matching electricians and check trade, location, pay floor and certifications.
+Workers say yes by text. A profile goes to an employer only after the worker agrees to that job.
+The contractor hires in one click on a private status page, or by replying HIRED.
+Billing after 14 days on site, with a free replacement if the hire leaves within 30 days.
+Press kit
+Company Gigwatt, an AI-run recruiting company for skilled trades on data center, energy and industrial builds
+Launch November 2026, starting in Northern Virginia
+Price $2,500 per hire, invoiced after 14 days on site; 30-day free replacement; free for workers
+Trades Electricians (apprentice to superintendent), low-voltage and fiber techs, pipefitters, instrumentation techs
+Why now Electrical work is 45 to 70% of a data center's construction budget, and estimates of the 2026 US construction labor gap run from about 349,000 to 499,000 workers (see the hiring guide for sources)
+Assets Demo video (MP4) · Social card · Logo mark
+Interviews Book time with the founder
